@@ -1,50 +1,50 @@
 #include <stdio.h>
-#include <windows.h>//consoleÃ¢ ¸¸µé±â
+#include <windows.h>//consoleì°½ ë§Œë“¤ê¸°
 #include <conio.h>
 #include <time.h>//time() 
 #include <stdlib.h>//srand() 
 #include <stdbool.h>//tru false
-//21.10¿ù 20ÀÏ±îÁö ¸¸µé±â
-//¤¾¤·¤¼ 
-//ÃßÈÄ¿¡ º¸½º Ãß°¡ÇÏ±â
-//ÀÌ¸§ ÀÔ·Â ¹ŞÀº ÈÄ Ä³¸¯ÅÍ À§¿¡ Ãß°¡ ÇÏ±â
+//21.10ì›” 20ì¼ê¹Œì§€ ë§Œë“¤ê¸°
+//ã…ã…‡ã…Œ 
+//ì¶”í›„ì— ë³´ìŠ¤ ì¶”ê°€í•˜ê¸°
+//ì´ë¦„ ì…ë ¥ ë°›ì€ í›„ ìºë¦­í„° ìœ„ì— ì¶”ê°€ í•˜ê¸°
 #define dino_bottom_y 12
 #define car_1_bottom_y 13
-//ÄÜ¼ÖÃ¢ Å©±âÁöÁ¤ ÇÔ¼ö
-//system ÇÔ¼ö ÀÌ¿ëÇÏ±â
+//ì½˜ì†”ì°½ í¬ê¸°ì§€ì • í•¨ìˆ˜
+//system í•¨ìˆ˜ ì´ìš©í•˜ê¸°
 void SetConsoleView()
 {
-	system("mode con:cols=120 lines=30");//console Ã¢ Å©±âÁöÁ¤
+	system("mode con:cols=120 lines=30");//console ì°½ í¬ê¸°ì§€ì •
 	system("title Chrome game homage by 5muji");
 
 }
-//Ä¿¼­ À§Ä¡ º¯°æ ÇÔ¼ö
-//ÄÜ¼ÖÃ¢Àº ¿ŞÂÊ À­ ºÎºĞÀÌ (0,0)ÀÌ´Ù.
+//ì»¤ì„œ ìœ„ì¹˜ ë³€ê²½ í•¨ìˆ˜
+//ì½˜ì†”ì°½ì€ ì™¼ìª½ ìœ— ë¶€ë¶„ì´ (0,0)ì´ë‹¤.
 void GotoXY(int x, int y)
 {
 	COORD pos;
-	pos.X= 2 * x;//ÄÜ¼Ö Ã¢¿¡¼­ x 2Ä­ÀÌ¶û yÇÑÄ­ÀÌ¶û µ¿ÀÏÇÏ°Ô º¸ÀÌ´Ù.
+	pos.X= 2 * x;//ì½˜ì†” ì°½ì—ì„œ x 2ì¹¸ì´ë‘ yí•œì¹¸ì´ë‘ ë™ì¼í•˜ê²Œ ë³´ì´ë‹¤.
 	pos.Y= y;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
-//Å°º¸µå ÀÔ·ÂÀ» ¹Ş°í ¹İÈ¯ÇÏ´Â ÇÔ¼ö
+//í‚¤ë³´ë“œ ì…ë ¥ì„ ë°›ê³  ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
 void keyreward()
 {
 	if (_kbhit() != 0)
 		return _getch();
-	return 0;//else »ç¿ëÇÏ¸é ¾ÈµÇ³ª
+	return 0;//else ì‚¬ìš©í•˜ë©´ ì•ˆë˜ë‚˜
 }
 
-//½Ã°£ Á¡¼öÇÔ¼ö ¸¸µé±â
+//ì‹œê°„ ì ìˆ˜í•¨ìˆ˜ ë§Œë“¤ê¸°
 
-//clock ÇÔ¼ö ÀÌ¿ëÇÏ±â
+//clock í•¨ìˆ˜ ì´ìš©í•˜ê¸°
 
-//ÀÚµ¿Â÷±×¸®´Â ÇÔ¼ö
-void crong(int dinoY)//ÃâÃ³ : https://blockdmask.tistory.com/344 (°¨»çÇÕ´Ï´Ù.¤Ğ)
-//Á¤Àûº¯¼ö·Î ¿òÁ÷ÀÓ Ç¥Çö
+//ìë™ì°¨ê·¸ë¦¬ëŠ” í•¨ìˆ˜
+void crong(int dinoY)//ì¶œì²˜ : https://blockdmask.tistory.com/344 (ê°ì‚¬í•©ë‹ˆë‹¤.ã… )
+//ì •ì ë³€ìˆ˜ë¡œ ì›€ì§ì„ í‘œí˜„
 {
     GotoXY(0, dinoY);
-    static bool legFlag = true;//13Ä­ Á¡ÇÁ¸¦ (ÃÑ 
+    static bool legFlag = true;//13ì¹¸ ì í”„ë¥¼ (ì´ 
     printf("        $$$$$$$ \n");
     printf("       $$ $$$$$$\n");
     printf("       $$$$$$$$$\n");
@@ -56,7 +56,7 @@ void crong(int dinoY)//ÃâÃ³ : https://blockdmask.tistory.com/344 (°¨»çÇÕ´Ï´Ù.¤Ğ)
     printf("  $$$$$$$$$$    \n");
     printf("    $$$$$$$$    \n");
     printf("     $$$$$$     \n");
-    if (legFlag)//Á¤Àû ÇÔ¼ö·Î ¿òÁ÷ÀÓ Ç¥ÇöÇÑ°Å °°´Ù.
+    if (legFlag)//ì •ì  í•¨ìˆ˜ë¡œ ì›€ì§ì„ í‘œí˜„í•œê±° ê°™ë‹¤.
     {
         printf("     $    $$$    \n");
         printf("     $$          \n");
@@ -70,7 +70,7 @@ void crong(int dinoY)//ÃâÃ³ : https://blockdmask.tistory.com/344 (°¨»çÇÕ´Ï´Ù.¤Ğ)
     }
 }
 void car_1()
-{//ÀÚµ¿Â÷ ±×¸®±â
+{//ìë™ì°¨ ê·¸ë¦¬ê¸°
     GotoXY(0, car_1_bottom_y);
     static bool tire_1 = true;
     printf("   %%%%%%%%%%%% \n");
@@ -98,15 +98,15 @@ void car_1()
 }
 
 
-//ÇüÅÂº¯È­ Æ÷ÇÔÇÏ±â(´ÙÀ½¿¡)
-//½Ã°£ Áö³ª¸é ¸ğ½À º¯ÇÏ±â
-//È÷Æ®¹Ú½º Ãß°¡ÇÏ±â
+//í˜•íƒœë³€í™” í¬í•¨í•˜ê¸°(ë‹¤ìŒì—)
+//ì‹œê°„ ì§€ë‚˜ë©´ ëª¨ìŠµ ë³€í•˜ê¸°
+//íˆíŠ¸ë°•ìŠ¤ ì¶”ê°€í•˜ê¸°
 
 
-//¹ß»çÇÔ¼ö
+//ë°œì‚¬í•¨ìˆ˜
 
-//·£´ı Àå¾Ö¹° 5°³ ¸¸µé±â
-void obstacle_1(int tree_x)//°ø·æÀº 3±îÁö Á¡ÇÁ
+//ëœë¤ ì¥ì• ë¬¼ 5ê°œ ë§Œë“¤ê¸°
+void obstacle_1(int tree_x)//ê³µë£¡ì€ 3ê¹Œì§€ ì í”„
 {
     printf("");
     printf("");
@@ -116,24 +116,24 @@ void obstacle_1(int tree_x)//°ø·æÀº 3±îÁö Á¡ÇÁ
     printf("");
     
 }
-//¾ÆÀÌÅÛ
+//ì•„ì´í…œ
 
-//¶óÀÌÇÁ ÇÔ¼ö
+//ë¼ì´í”„ í•¨ìˆ˜
 
-//¹Ì»çÀÏ Ãæµ¿ÇÔ¼ö °ø·æ Ãæµ¹ ÇÔ¼ö
+//ë¯¸ì‚¬ì¼ ì¶©ë™í•¨ìˆ˜ ê³µë£¡ ì¶©ëŒ í•¨ìˆ˜
 
-//³ë·¡ÇÔ¼ö Æ÷ÇÔ½ÃÅ°±â
+//ë…¸ë˜í•¨ìˆ˜ í¬í•¨ì‹œí‚¤ê¸°
 
-//gameover ÇÔ
+//gameover í•¨
 
-//¸ŞÀÎÇÔ¼ö
+//ë©”ì¸í•¨ìˆ˜
 int main()
 {
-    SetConsoleView();//ÄÜ¼Ö Ã¢ ÇÔ¼ö
+    SetConsoleView();//ì½˜ì†” ì°½ í•¨ìˆ˜
 
    
 
-    while (true)//°ÔÀÓ ÇÑ ÆÇÀ» true·Î ¤½Çö
+    while (true)//ê²Œì„ í•œ íŒì„ trueë¡œ ã…í˜„
     {
 
     }
