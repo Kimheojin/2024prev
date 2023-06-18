@@ -30,6 +30,7 @@ class Hello{//파일 이름이랑 같아야 한다(대소문자 까지)
         final int Max_speed = 10;
 
         System.out.println(Max_speed);
+        System.out.println(Max_speed);
 
     }
 }//java로 프로그램 작성하기
