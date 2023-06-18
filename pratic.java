@@ -17,6 +17,9 @@ public interface pratic {
         Sring second = "coding";
          */
 
+         String firstString = "this is";
+   
+
 
     }    
 } 

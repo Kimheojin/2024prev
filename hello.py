@@ -237,6 +237,163 @@ del dictionary["body"]
 
 print(dictionary)
 
+
+
+def fib(n):
+    counter += 1#재귀로 구현하는듯
+
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+    
+
+print(fib)
+
+재귀 함수의 문제 
+개발자 사이에서는 재귀함수를 사용하지 말자는 의견도 많음
+
+메모화에 대해 알아보자
+
+
+
+def fibnacci(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    else:
+        return fibnacci(n-1) + fibnacci(n-2)
+    
+
+
+print(fibnacci(10))
+
+
+#unboundlocalerror에 대한 처리
+
+global counter
+counter = 0
+
+def fib(n):
+    counter += 1
+
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+    
+print(fib(3))
+
+
+
+dictionary = {
+    1:  1, 
+    2:  1
+}#메모 변수 선언한 다음에 하는듯
+
+def fib(n):
+    if n in dictionary:
+        return dictionary[n]
+    else:
+        output = fib(n-1) + fib(n-2)
+        dictionary[n] = output
+        return output
+print("fibonacci(10):", fib(10))
+print("fibonacci(20):", fib(20))
+print("fibonacci(30):", fib(30))
+
+
+def get_circumference(radius):
+    return 2 
+#튜플:함수와 함꼐 많이 사용되는 리스트의 비슷한 자료형으로 리스트와 다른 점은 한번 결정된 요소는 바꿀 수 없다는 것
+#람다:매개 변수로 함수를 전달하기 위해 함수 구문을 
+#한번 결정된 요소를 바꿀 수 없다는 것이다
+#일반적으로 튜플은 함수와 함께 많이 사용되는 자료형이다
+#튜플은 다음과 같은 방법으로 생성
+#(데이터, 데이터, )
+
+test_1 = (10, 20, 30)
+print(test_1[0])
+
+print(test_1[1])
+#튜플은 리스트와 차이가 거의 없지만 요소를 변결할 때 차이가 있다
+
+tuple_test = 10, 20, 30, 40
+
+print("괄호가 없는 튜플의 값과 자료형 출력")
+print(tuple_test)
+
+print()
+
+a, b, c = 10, 20, 30
+
+print("괄호가 없는 튜플을 활용한 할당")
+print("a: ", a)
+print("b: ", b)
+print("c: ", c)
+
+
+a, b = b, a
+print(a)
+print(b)
+
+def test():
+    return (10, 20)
+print(test())
+
+a, b = test()
+print(a)
+print(b)
+
+#튜플을 리턴하는 함수의 예
+#enum
+
+#lamda
+
+def call_10_times(func):#함수를 매개변수 로써도 사용 가능
+    for i in range(10):
+        func()
+
+def print_hello():
+    print("안녕하세요")
+
+call_10_times(print_hello)
+
+
+
+def power(item):
+    return item*item
+def under_3(item):
+    return item < 3
+
+list_input_a = [1, 2, 3, 4, 5]
+
+output_a = map
+
+
+
+def power(item):
+    return item * item
+def under_3(item):
+    return item<3#filter 함수에 넣어주면 true인 값만 살리고 나머진 버려준다
+
+list_input_a = [1, 2, 3, 4, 5]
+
+output_a = map(power, list_input_a)#리턴값으로 새로운 리스트를 구성해 주는 함수이다
+filter()#함수 사용하면 
+print("map 함수의 실행 결과")
 """
 
-print("heello")
+#람다는 간단한 함수를 쉽게 선언하느느 방법
+
+power = lambda x: x*x
+under_3 = lambda x: x<3#앞에는 배개변수, 뒤에는 리턴값
+
+list_input_a = [1, 2, 3, 4, 5]
+output_a = map(ladfddfddf, list_input_a)
+print(output_a)
