@@ -27,10 +27,36 @@ class Hello{//파일 이름이랑 같아야 한다(대소문자 까지)
         //논리형 
         //문자형 char 
         //상수 사용 final
+        /* 
         final int Max_speed = 10;
 
         System.out.println(Max_speed);
         System.out.println(Max_speed);
+        
 
+        int i = 3;
+        i++;
+        System.out.println(i);
+        i++;
+        System.out.println(++i);
+        System.out.println(++i);
+        System.out.println(++i);
+        System.out.println(i);
+        
+        if(true){
+            System.out.println(1);
+        }
+        else{
+            System.out.println(2);
+        }
+        */
+        String id = args[0];
+        if(id.equals("egoing")){
+            System.out.println("right");
+        }else{
+            System.out.println("wrong");
+        }
+    
+        
     }
 }//java로 프로그램 작성하기
