@@ -49,13 +49,14 @@ class Hello{//파일 이름이랑 같아야 한다(대소문자 까지)
         else{
             System.out.println(2);
         }
-        */
+        
         String id = args[0];
         if(id.equals("egoing")){
             System.out.println("right");
         }else{
             System.out.println("wrong");
         }
+        */
     
         
     }
