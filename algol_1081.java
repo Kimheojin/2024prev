@@ -6,8 +6,9 @@ public class algol_1081 {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
 
+        sc.nextLine();
 
-        String[] alpha = new String[N];//alpha 배열
+        String[] alpha = new String[N];//alpha 배열3
 
         for(int i = 0; i < N;i++){
             alpha[i] = sc.nextLine();
@@ -15,12 +16,6 @@ public class algol_1081 {
         }
         Arrays.sort(alpha, Comparator.comparing(String::length));
         System.out.println(alpha[0]);
-        
-
-
-        
-        
-
         
     }
     
