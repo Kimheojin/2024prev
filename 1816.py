@@ -9,6 +9,6 @@ print(af_string[0])
 for i in range(1,int(row)+1):#열의개수 먼저
     for j in range(0, int(cols)):
         print(af_string[int(cols)+ j*int(cols)])
-    if()
+
     
         
