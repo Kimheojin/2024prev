@@ -1,5 +1,5 @@
-import java.util.Scanner;
 
+/* 
 class pull{
 
     int[] stick;//담아 둘 배열
@@ -43,5 +43,5 @@ public class algol_1094 {
     }
 }
     
-    
+    */
   
