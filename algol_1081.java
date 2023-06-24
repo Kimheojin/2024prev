@@ -14,9 +14,16 @@ public class algol_1081 {
             alpha[i] = sc.nextLine();
             
         }
-        Arrays.sort(alpha, Comparator.comparing(String::length));
-        System.out.println(alpha[0]);
         
+        //arr 이 ㅡㄱ거
+        Arrays.sort(alpha, new Comparator<String>() {
+         @Override
+        public int compare(String s1, String s2) {
+        return s1.length() - s2.length();
+        }});
+        System.out.println(Arrays.toString(alpha));
+
+
     }
     
 }
