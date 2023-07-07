@@ -1,14 +1,9 @@
-class Calculator{
-    int left, right;
+import java.util.*;
 
-    public void setOprands(int left, int right){
-        this.left = left;
-        this.right = right;
-    }
-    public void divide(){
-        try{
-            System.out.print("계산결과는");
-            
-        }
+public class al_1{
+    public void main(String args[]){
+        System.out.println("hello");
+
+        
     }
 }

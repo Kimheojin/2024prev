@@ -7,7 +7,7 @@ public class array_1 {
         Queue q = new LinkedList();
 
         st.push("0");
-        st
+        
     }
     
 }
