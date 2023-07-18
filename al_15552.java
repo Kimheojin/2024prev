@@ -1,12 +1,30 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
 public class al_15552 {
     public static void main(String args[]) throws IOException {
-        //bufferreader는 데이터를 가공하는 과정이 필요하다.
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        //한 줄씩 string 으로 입력 받기 때문에 빠르다 (항상 잘 기억하기)
 
-        String s = 
-        //readline으로 받을 시 string으로 형식이 고정 다른 타입으로 입력을 받을려면 형 변환을 꼭 해주어야 한다 
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));//선언
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int N = Integer.parseInt(br.readLine());
+
+        StringTokenizer st;
+        
+        for (int i = 0; i < N; i++){
+            st = new StringTokenizer(br.readLine(), " ");
+            bw.write((Integer.parseInt(st.nextToken() + Integer.parseInt(st.nextToken())))+ "\n" );
+        }
+        br.close();
+
+        bw.flush();
+        bw.close();
+        
+
     }
 }
