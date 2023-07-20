@@ -4,38 +4,38 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class al_2720 {
+public class al_8958 {
     public static void main(String args[]) throws IOException{
-        
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = Integer.parseInt(br.readLine());
 
-        int source;
+        String str;
 
-        int tmp = 0;
+      
         for(int i = 0; i < N; i++){
-            source = Integer.parseInt(br.readLine());
-            tmp = source / 25;
-            bw.write(tmp + " ");
+            str = br.readLine();
 
-            source = source % 25;
-            tmp = source / 10;
-            bw.write(tmp + " ");
+            int count = 0;
+            int score = 1;
 
-            source = source % 10;
-            tmp = source / 5;
-            bw.write(tmp + " ");
+            for(int j = 0; j < str.length(); j++){
+                if(str.charAt(j) == 'O'){
+                    count = count + score;
+                    score = score + 1;
 
-            source = source % 5;
-
-            bw.write(source + "\n");
-            
+                }
+                else{
+                    score = 1;
+                }
+            }
+            bw.write(count + "\n");
         }
-
         bw.flush();
         bw.close();
+
+        
     }
 }
