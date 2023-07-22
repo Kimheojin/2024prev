@@ -3,24 +3,29 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class al_11050 {
+public class al_1018 {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        StringTokenizer st;
+
+        st = new StringTokenizer(br.readLine(), " ");
+
+        int M = Integer.parseInt(st.nextToken());
 
         int N = Integer.parseInt(st.nextToken());
+ 
+        String[] str = new String [M];
 
-        int K = Integer.parseInt(st.nextToken());
-
-        int a_1 = 1;
-        int a_2 = 1;
-
-        for(int i =0; i < K; i++){
-            a_1 = (N - i) * a_1;
-            a_2 = a_2*(i+1); 
+        for(int i = 0; i < M; i++){
+            str[i] = br.readLine();
         }
 
-        System.out.println(a_1/a_2);
+        for(int i = 0; )
+
+
+
+
+
     }
 }
