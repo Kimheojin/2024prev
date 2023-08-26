@@ -7,6 +7,8 @@ public class al_1463{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
             int N = Integer.parseInt(br.readLine());
+            //철수의 토마토 농장에서는 토마토를 보관하는 
+            //대각선
 
             while(true){
                 if
